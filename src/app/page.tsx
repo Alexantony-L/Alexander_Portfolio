@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeToggle } from "@/components/theme-toggle";
-import Image from 'next/image';
+import Image from "next/image";
 import {
   Github,
   Linkedin,
@@ -30,7 +30,7 @@ import {
   Cpu,
   MessageSquare,
   Send,
-  FileJson 
+  FileJson,
 } from "lucide-react";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 export default function Portfolio() {
@@ -126,51 +126,57 @@ export default function Portfolio() {
       setActiveSection(sectionId);
     }
   };
-const certifications = [
-  {
-    title: "AWS Solution Architect",
-    provider: "Coursera",
-    badgeColor: "bg-yellow-500"
-  },
-  {
-    title: "AWS DevOps Engineer",
-    provider: "Udemy",
-   badgeColor: "bg-yellow-500"
-  },
-  {
-    title: "System Design Fundamentals",
-    provider: "Udemy",
-    badgeColor: "bg-yellow-500"
-  },
-  {
-    title: "Serverless Architecture",
-    provider: "Udemy",
-   badgeColor: "bg-yellow-500"
-  }
-];
+  const certifications = [
+    {
+      title: "AWS Solution Architect",
+      provider: "Coursera",
+      badgeColor: "bg-yellow-500",
+    },
+    {
+      title: "AWS DevOps Engineer",
+      provider: "Udemy",
+      badgeColor: "bg-yellow-500",
+    },
+    {
+      title: "System Design Fundamentals",
+      provider: "Udemy",
+      badgeColor: "bg-yellow-500",
+    },
+    {
+      title: "Serverless Architecture",
+      provider: "Udemy",
+      badgeColor: "bg-yellow-500",
+    },
+  ];
 
   const projects = [
     {
       title: "AI Chatbot",
       description:
         "RAG Intelligent conversational AI system with natural language processing capabilities",
-      technologies: ["OpenAI", "React", "Node.js", "WebSocket","SQL server"],
+      technologies: ["OpenAI", "React", "Node.js", "WebSocket", "SQL server"],
       image: "/project1.jpg",
     },
     {
       title: " Candidate Trainer",
       description:
         "AI-powered training platform with real-time feedback and assessment",
-      technologies: ["Vertex AI", "ASP.Net MVC","jquery", "Python", "SQL Server"],
-  
+      technologies: [
+        "Vertex AI",
+        "ASP.Net MVC",
+        "jquery",
+        "Python",
+        "SQL Server",
+      ],
+
       image: "/project2.jpg",
     },
     {
       title: "Document Management System",
       description:
         "Scalable document handling with advanced search and collaboration features",
-      technologies: ["React", "Express", "postgreSql", "AWS S3","Redis"],
-     
+      technologies: ["React", "Express", "postgreSql", "AWS S3", "Redis"],
+
       image: "/project3.jpg",
     },
     {
@@ -182,123 +188,122 @@ const certifications = [
     },
   ];
 
-const skills = {
-  frontend: [
-    {
-      name: 'Javscript',
-      level: 90,
-      icon: <FileJson className="w-8 h-8" />,
-      color: 'text-yellow-500',
-    },
-    {
-      name: 'React',
-      level: 85,
-      icon: <Code className="w-8 h-8" />,
-      color: 'text-blue-500',
-    },
-    {
-      name: 'Redux',
-      level: 85,
-      icon: <Zap className="w-8 h-8" />,
-      color: 'text-purple-500',
-    },
-    {
-      name: 'Next.js',
-      level: 90,
-      icon: <Monitor className="w-8 h-8" />,
-      color: 'text-gray-700 dark:text-gray-300',
-    },
-    {
-      name: 'Tailwind CSS',
-      level: 88,
-      icon: <Palette className="w-8 h-8" />,
-      color: 'text-teal-500',
-    },
-  ],
-  backend: [
-    {
-      name: 'Node.js',
-      level: 92,
-      icon: <Server className="w-8 h-8" />,
-      color: 'text-green-600',
-    },
-    {
-      name: 'Express',
-      level: 88,
-      icon: <Cpu className="w-8 h-8" />,
-      color: 'text-gray-700 dark:text-gray-300',
-    },
-    {
-      name: 'ASP.NET',
-      level: 80,
-      icon: <Database className="w-8 h-8" />,
-      color: 'text-blue-600',
-    },
-    {
-      name: 'Python',
-      level: 85,
-      icon: <Code className="w-8 h-8" />,
-      color: 'text-yellow-500',
-    },
-  ],
-  cloud: [
-    {
-      name: 'AWS',
-      level: 82,
-      icon: <Cloud className="w-8 h-8" />,
-      color: 'text-orange-500',
-    },
-    {
-      name: 'Azure',
-      level: 78,
-      icon: <Cloud className="w-8 h-8" />,
-      color: 'text-blue-500',
-    },
-    {
-      name: 'DevOps',
-      level: 75,
-      icon: <Cpu className="w-8 h-8" />,
-      color: 'text-red-500',
-    },
-    {
-      name: 'WebSocket',
-      level: 90,
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: 'text-green-500',
-    },
-  ],
-  ai: [
-    {
-      name: 'OpenAI',
-      level: 88,
-      icon: <Bot className="w-8 h-8" />,
-      color: 'text-green-600',
-    },
-    {
-      name: 'Vertex AI',
-      level: 82,
-      icon: <Bot className="w-8 h-8" />,
-      color: 'text-blue-600',
-    },
-    {
-      name: 'Langchain',
-      level: 80,
-      icon: <Bot className="w-8 h-8" />,
-      color: 'text-purple-600',
-    },
-    {
-      name: 'Dialogflow CX',
-      level: 85,
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: 'text-orange-600',
-    },
-  ],
-};
+  const skills = {
+    frontend: [
+      {
+        name: "Javscript",
+        level: 90,
+        icon: <FileJson className="w-8 h-8" />,
+        color: "text-yellow-500",
+      },
+      {
+        name: "React",
+        level: 85,
+        icon: <Code className="w-8 h-8" />,
+        color: "text-blue-500",
+      },
+      {
+        name: "Redux",
+        level: 85,
+        icon: <Zap className="w-8 h-8" />,
+        color: "text-purple-500",
+      },
+      {
+        name: "Next.js",
+        level: 90,
+        icon: <Monitor className="w-8 h-8" />,
+        color: "text-gray-700 dark:text-gray-300",
+      },
+      {
+        name: "Tailwind CSS",
+        level: 88,
+        icon: <Palette className="w-8 h-8" />,
+        color: "text-teal-500",
+      },
+    ],
+    backend: [
+      {
+        name: "Node.js",
+        level: 92,
+        icon: <Server className="w-8 h-8" />,
+        color: "text-green-600",
+      },
+      {
+        name: "Express",
+        level: 88,
+        icon: <Cpu className="w-8 h-8" />,
+        color: "text-gray-700 dark:text-gray-300",
+      },
+      {
+        name: "ASP.NET",
+        level: 80,
+        icon: <Database className="w-8 h-8" />,
+        color: "text-blue-600",
+      },
+      {
+        name: "Python",
+        level: 85,
+        icon: <Code className="w-8 h-8" />,
+        color: "text-yellow-500",
+      },
+    ],
+    cloud: [
+      {
+        name: "AWS",
+        level: 82,
+        icon: <Cloud className="w-8 h-8" />,
+        color: "text-orange-500",
+      },
+      {
+        name: "Azure",
+        level: 78,
+        icon: <Cloud className="w-8 h-8" />,
+        color: "text-blue-500",
+      },
+      {
+        name: "DevOps",
+        level: 75,
+        icon: <Cpu className="w-8 h-8" />,
+        color: "text-red-500",
+      },
+      {
+        name: "WebSocket",
+        level: 90,
+        icon: <MessageSquare className="w-8 h-8" />,
+        color: "text-green-500",
+      },
+    ],
+    ai: [
+      {
+        name: "OpenAI",
+        level: 88,
+        icon: <Bot className="w-8 h-8" />,
+        color: "text-green-600",
+      },
+      {
+        name: "Vertex AI",
+        level: 82,
+        icon: <Bot className="w-8 h-8" />,
+        color: "text-blue-600",
+      },
+      {
+        name: "Langchain",
+        level: 80,
+        icon: <Bot className="w-8 h-8" />,
+        color: "text-purple-600",
+      },
+      {
+        name: "Dialogflow CX",
+        level: 85,
+        icon: <MessageSquare className="w-8 h-8" />,
+        color: "text-orange-600",
+      },
+    ],
+  };
 
   const ideas = [
     "Voice-first resume builder",
     "AI-integrated knowledge base for SMEs",
-   
   ];
 
   return (
@@ -323,21 +328,26 @@ const skills = {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              {["home", "about", "projects", "skills","certifications", "contact"].map(
-                (item) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(item)}
-                    className={`px-3 py-2 rounded-lg transition-all duration-200 ${
-                      activeSection === item
-                        ? "bg-amber-600 text-white dark:bg-amber-700"
-                        : "text-amber-800 hover:bg-amber-100 dark:text-amber-200 dark:hover:bg-amber-900/50"
-                    }`}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </button>
-                )
-              )}
+              {[
+                "home",
+                "about",
+                "projects",
+                "skills",
+                "certifications",
+                "contact",
+              ].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className={`px-3 py-2 rounded-lg transition-all duration-200 ${
+                    activeSection === item
+                      ? "bg-amber-600 text-white dark:bg-amber-700"
+                      : "text-amber-800 hover:bg-amber-100 dark:text-amber-200 dark:hover:bg-amber-900/50"
+                  }`}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </button>
+              ))}
               <ThemeToggle />
             </div>
 
@@ -415,7 +425,7 @@ const skills = {
                     Hi, I'm Alexander L
                   </h1>
                   <p className="text-lg md:text-xl text-amber-800 dark:text-amber-300 mb-4 md:mb-6">
-                    Full Stack Developer 
+                    Full Stack Developer
                   </p>
                 </div>
               </div>
@@ -437,7 +447,6 @@ const skills = {
                     </span>
                   </div>
                 </div>
-            
               </div>
             </motion.div>
 
@@ -451,26 +460,23 @@ const skills = {
                 <div className="relative group">
                   <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full flex items-center justify-center skeuo-metal overflow-hidden">
                     {/* {profilePhoto ? ( */}
-<Image
-  src="/Alex.jpg"
-  alt="Alexander L"
-  width={256} 
-  height={256}
-  className="object-cover mb-[25px] rounded-full"
-/>
-
+                    <Image
+                      src="/Alex.jpg"
+                      alt="Alexander L"
+                      width={256}
+                      height={256}
+                      className="object-cover mb-[25px] rounded-full"
+                    />
                   </div>
-                <div className="mt-5">
-          <a  href="/api/download" target="_blank" >
-  <Button className="w-full skeuo-button text-white cursor-pointer">
-    <Download className="w-4 h-4 mr-2" />
-    Download Resume
-  </Button>
-</a>
-      </div>
-            
+                  <div className="mt-5">
+                    <a href="/api/download" target="_blank">
+                      <Button className="w-full skeuo-button text-white cursor-pointer">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Resume
+                      </Button>
+                    </a>
+                  </div>
                 </div>
-
               </div>
             </motion.div>
           </div>
@@ -505,8 +511,8 @@ const skills = {
               </h3>
               <p className="text-amber-800 dark:text-amber-300 leading-relaxed mb-6">
                 A passionate full-stack engineer with a flair for AI-powered web
-                applications, real-time systems. My mission is to solve complex problems with
-                beautiful, user-friendly solutions.
+                applications, real-time systems. My mission is to solve complex
+                problems with beautiful, user-friendly solutions.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-amber-900 dark:text-amber-200 mb-4">
@@ -533,7 +539,9 @@ const skills = {
 
               <div className="mt-6 p-4 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
                 <p className="text-amber-800 dark:text-amber-300 italic">
-                  "Beyond writing code, I'm passionate about exploring new technologies and expanding my knowledge to grow as a developer"
+                  "Beyond writing code, I'm passionate about exploring new
+                  technologies and expanding my knowledge to grow as a
+                  developer"
                 </p>
               </div>
             </motion.div>
@@ -591,7 +599,6 @@ const skills = {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    
                     "System Design",
                     "Prompt Engineering",
                     "Agentic AI",
@@ -607,9 +614,7 @@ const skills = {
                     "Tailwind css",
                     "bootstrap",
                     "jquery",
-                    "ASp.net MVC"
-
-
+                    "ASp.net MVC",
                   ].map((tech) => (
                     <Badge
                       key={tech}
@@ -682,8 +687,6 @@ const skills = {
                     </Badge>
                   ))}
                 </div>
-
-          
               </motion.div>
             ))}
           </div>
@@ -708,17 +711,18 @@ const skills = {
             </p>
           </motion.div>
 
-         <div className="skeuo-card p-4 md:p-8 rounded-2xl">
-      <Tabs defaultValue="frontend" className="w-full">
- <TabsList className="   grid w-full grid-cols-2 lg:grid-cols-4 gap-2 
+          <div className="skeuo-card p-4 md:p-8 rounded-2xl">
+            <Tabs defaultValue="frontend" className="w-full">
+              <TabsList
+                className="   grid w-full grid-cols-2 lg:grid-cols-4 gap-2 
     mb-6 md:mb-8 
-    !h-auto min-h-0">
-
-  {["frontend", "backend", "cloud", "ai"].map((tab) => (
-    <TabsTrigger
-      key={tab}
-      value={tab}
-      className="
+    !h-auto min-h-0"
+              >
+                {["frontend", "backend", "cloud", "ai"].map((tab) => (
+                  <TabsTrigger
+                    key={tab}
+                    value={tab}
+                    className="
     
         w-full
         text-center
@@ -732,108 +736,116 @@ const skills = {
         whitespace-nowrap
         overflow-hidden
       "
-    >
-      {tab === "frontend" ? "Frontend" :
-       tab === "backend" ? "Backend" :
-       tab === "cloud" ? "Cloud/DevOps" :
-       "AI Tools"}
-    </TabsTrigger>
-  ))}
-</TabsList>
+                  >
+                    {tab === "frontend"
+                      ? "Frontend"
+                      : tab === "backend"
+                      ? "Backend"
+                      : tab === "cloud"
+                      ? "Cloud/DevOps"
+                      : "AI Tools"}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
 
-
-        {Object.entries(skills).map(([category, skillList]) => (
-          <TabsContent key={category} value={category} className="space-y-6">
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {skillList.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center group"
+              {Object.entries(skills).map(([category, skillList]) => (
+                <TabsContent
+                  key={category}
+                  value={category}
+                  className="space-y-6"
                 >
-                  <div className="skeuo-dial w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 flex items-center justify-center">
-                    <div className={`${skill.color} text-3xl z-10`}>
-                      {skill.icon}
-                    </div>
-                  </div>
-                  <h3 className="font-semibold text-amber-900 dark:text-amber-200 text-sm md:text-base mb-2">
-                    {skill.name}
-                  </h3>
-                  <div className="flex justify-center space-x-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="w-2 h-2 rounded-full bg-amber-400 dark:bg-amber-600 opacity-60"
-                      />
+                  <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    {skillList.map((skill, index) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-center group"
+                      >
+                        <div className="skeuo-dial w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 flex items-center justify-center">
+                          <div className={`${skill.color} text-3xl z-10`}>
+                            {skill.icon}
+                          </div>
+                        </div>
+                        <h3 className="font-semibold text-amber-900 dark:text-amber-200 text-sm md:text-base mb-2">
+                          {skill.name}
+                        </h3>
+                        <div className="flex justify-center space-x-1 mb-2">
+                          {[...Array(5)].map((_, i) => (
+                            <div
+                              key={i}
+                              className="w-2 h-2 rounded-full bg-amber-400 dark:bg-amber-600 opacity-60"
+                            />
+                          ))}
+                        </div>
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                          <div className="text-xs font-bold text-amber-700 dark:text-amber-400">
+                            {skill.level}%
+                          </div>
+                          <div className="w-full bg-amber-200 dark:bg-amber-800 rounded-full h-1 mt-1">
+                            <div
+                              className="bg-gradient-to-r from-amber-500 to-orange-500 h-1 rounded-full transition-all duration-300"
+                              style={{ width: `${skill.level}%` }}
+                            />
+                          </div>
+                        </div>
+                      </motion.div>
                     ))}
                   </div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    <div className="text-xs font-bold text-amber-700 dark:text-amber-400">
-                      {skill.level}%
-                    </div>
-                    <div className="w-full bg-amber-200 dark:bg-amber-800 rounded-full h-1 mt-1">
-                      <div
-                        className="bg-gradient-to-r from-amber-500 to-orange-500 h-1 rounded-full transition-all duration-300"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                </motion.div>
+                </TabsContent>
               ))}
-            </div>
-          </TabsContent>
-        ))}
-      </Tabs>
-    </div>
+            </Tabs>
+          </div>
         </div>
       </section>
       {/* certifications */}
-<section id="certifications" className="py-16 md:py-20 px-4">
-  <div className="container mx-auto max-w-4xl">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="text-center mb-8 md:mb-12"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-amber-900 dark:text-amber-200 mb-4">
-        Certifications
-      </h2>
-      <p className="text-lg md:text-xl text-amber-800 dark:text-amber-300">
-        Verified achievements
-      </p>
-    </motion.div>
-
-    <div className="space-y-6">
-      {certifications.map((cert, index) => (
-        <motion.div
-          key={cert.title}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          viewport={{ once: true }}
-          className="skeuo-card p-4 md:p-6 rounded-xl flex items-center gap-4"
-        >
-          <div className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full ${cert.badgeColor}`}>
-            <span className="text-white text-sm font-bold">✔</span>
-          </div>
-          <div className="flex-1">
-            <h3 className="text-base md:text-lg font-semibold text-amber-900 dark:text-amber-200">
-              {cert.title}
-            </h3>
-            <p className="text-sm text-amber-700 dark:text-amber-400">
-              {cert.provider}
+      <section id="certifications" className="py-16 md:py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 md:mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-900 dark:text-amber-200 mb-4">
+              Certifications
+            </h2>
+            <p className="text-lg md:text-xl text-amber-800 dark:text-amber-300">
+              Verified achievements
             </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="skeuo-card p-4 md:p-6 rounded-xl flex items-center gap-4"
+              >
+                <div
+                  className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full ${cert.badgeColor}`}
+                >
+                  <span className="text-white text-sm font-bold">✔</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-base md:text-lg font-semibold text-amber-900 dark:text-amber-200">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm text-amber-700 dark:text-amber-400">
+                    {cert.provider}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section
@@ -941,42 +953,44 @@ const skills = {
                 <h3 className="text-lg md:text-xl font-bold text-amber-900 dark:text-amber-200 mb-4">
                   Contact Information
                 </h3>
-             <div className="space-y-4">
-  {/* Email Link */}
-  <a href="mailto:antonyofficiall4@gmail.com" className="flex items-center space-x-3 cursor-pointer">
-    <Mail className="w-5 h-5 text-amber-600 dark:text-amber-500" />
-    <span className="text-amber-800 dark:text-amber-300 text-sm md:text-base">
-      antonyofficiall4@gmail.com
-    </span>
-  </a>
+                <div className="space-y-4">
+                  {/* Email Link */}
+                  <a
+                    href="mailto:antonyofficiall4@gmail.com"
+                    className="flex items-center space-x-3 cursor-pointer"
+                  >
+                    <Mail className="w-5 h-5 text-amber-600 dark:text-amber-500" />
+                    <span className="text-amber-800 dark:text-amber-300 text-sm md:text-base">
+                      antonyofficiall4@gmail.com
+                    </span>
+                  </a>
 
-  {/* LinkedIn Link */}
-  <a
-    href="https://www.linkedin.com/in/alexander-l-b592791b7/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center space-x-3 cursor-pointer"
-  >
-    <Linkedin className="w-5 h-5 text-amber-600 dark:text-amber-500" />
-    <span className="text-amber-800 dark:text-amber-300 text-sm md:text-base">
-      LinkedIn Profile
-    </span>
-  </a>
+                  {/* LinkedIn Link */}
+                  <a
+                    href="https://www.linkedin.com/in/alexander-l-b592791b7/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 cursor-pointer"
+                  >
+                    <Linkedin className="w-5 h-5 text-amber-600 dark:text-amber-500" />
+                    <span className="text-amber-800 dark:text-amber-300 text-sm md:text-base">
+                      LinkedIn Profile
+                    </span>
+                  </a>
 
-  {/* GitHub Link */}
-  <a
-    href="https://github.com/Alexantony-L"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center space-x-3 cursor-pointer"
-  >
-    <Github className="w-5 h-5 text-amber-600 dark:text-amber-500" />
-    <span className="text-amber-800 dark:text-amber-300 text-sm md:text-base">
-      GitHub Profile
-    </span>
-  </a>
-</div>
-
+                  {/* GitHub Link */}
+                  <a
+                    href="https://github.com/Alexantony-L"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 cursor-pointer"
+                  >
+                    <Github className="w-5 h-5 text-amber-600 dark:text-amber-500" />
+                    <span className="text-amber-800 dark:text-amber-300 text-sm md:text-base">
+                      GitHub Profile
+                    </span>
+                  </a>
+                </div>
               </div>
 
               <div className="skeuo-card p-4 md:p-6 rounded-2xl">
@@ -984,20 +998,25 @@ const skills = {
                   Blueprints for Tomorrow
                 </h3>
                 <div className="space-y-3">
-                    <div  className="skeuo-sticky p-3 rounded-lg">
-                      <p className="text-amber-900 dark:text-amber-200 text-sm">
-                       These are just glimpses of what's possible when curiosity meets creativity. We're constantly experimenting, refining, and learning — driven by a passion to solve real problems with thoughtful, innovative solutions. The ideas you see here are only the beginning. We're building for tomorrow, one bold step at a time.
-                      </p>
-                    </div>
+                  <div className="skeuo-sticky p-3 rounded-lg">
+                    <p className="text-amber-900 dark:text-amber-200 text-sm">
+                      These are just glimpses of what's possible when curiosity
+                      meets creativity. I'm constantly experimenting, refining,
+                      and learning — driven by a passion to solve real problems
+                      with thoughtful, innovative solutions. The ideas you see
+                      here are only the beginning. I'm building for tomorrow,
+                      one bold step at a time.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-          <a  href="/api/download" target="_blank">
-  <Button className="w-full skeuo-button text-white cursor-pointer">
-    <Download className="w-4 h-4 mr-2" />
-    Download Resume
-  </Button>
-</a>
+              <a href="/api/download" target="_blank">
+                <Button className="w-full skeuo-button text-white cursor-pointer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -1007,7 +1026,7 @@ const skills = {
       <footer className="bg-amber-900 dark:bg-gray-950 text-amber-100 dark:text-amber-200 py-3 md:py-4 px-4">
         <div className="container mx-auto text-center">
           <p className="text-sm md:text-base mb-2">
-            © {getYear}  All rights reserved.
+            © {getYear} All rights reserved.
           </p>
           {/* <div className="flex justify-center space-x-4 md:space-x-6">
             <Github className="w-5 h-5 md:w-6 md:h-6 hover:text-amber-300 dark:hover:text-amber-400 cursor-pointer transition-colors" />
